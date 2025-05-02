@@ -6,18 +6,18 @@ import com.google.gson.annotations.SerializedName;
 public class EmbedVideo implements EmbedUnion {
     @SerializedName("$type")
     private String type;
-    private EmbedImagesImage video;
+    private EmbedVideoVideo video;
 
     public EmbedVideo() {
         this.type = BlueskyTypes.EmbedVideo;
     }
 
 
-    public EmbedImagesImage getVideo() {
+    public EmbedVideoVideo getVideo() {
         return video;
     }
 
-    public void setVideo(EmbedImagesImage video) {
+    public void setVideo(EmbedVideoVideo video) {
         this.video = video;
     }
 
