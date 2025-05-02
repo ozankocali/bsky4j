@@ -1,10 +1,6 @@
 package bsky4j.util.json;
 
-import bsky4j.model.bsky.embed.EmbedExternal;
-import bsky4j.model.bsky.embed.EmbedImages;
-import bsky4j.model.bsky.embed.EmbedRecord;
-import bsky4j.model.bsky.embed.EmbedRecordWithMedia;
-import bsky4j.model.bsky.embed.EmbedUnion;
+import bsky4j.model.bsky.embed.*;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
@@ -30,6 +26,9 @@ public class EmbedSerializer implements JsonSerializer<EmbedUnion> {
         }
         if (src instanceof EmbedRecordWithMedia) {
             return context.serialize(src, EmbedRecordWithMedia.class);
+        }
+        if (src instanceof EmbedVideo) {
+            return context.serialize(src, EmbedVideo.class);
         }
         return null;
     }

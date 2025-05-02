@@ -19,6 +19,7 @@ public class BlueskyTypes {
     // Embed
     public static String EmbedExternal = "app.bsky.embed.external";
     public static String EmbedImages = "app.bsky.embed.images";
+    public static String EmbedVideo = "app.bsky.embed.video";
     public static String EmbedRecord = "app.bsky.embed.record";
     public static String EmbedRecordWithMedia = "app.bsky.embed.recordWithMedia";
 

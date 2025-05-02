@@ -1,11 +1,7 @@
 package bsky4j.util.json;
 
 import bsky4j.BlueskyTypes;
-import bsky4j.model.bsky.embed.EmbedExternal;
-import bsky4j.model.bsky.embed.EmbedImages;
-import bsky4j.model.bsky.embed.EmbedRecord;
-import bsky4j.model.bsky.embed.EmbedRecordWithMedia;
-import bsky4j.model.bsky.embed.EmbedUnion;
+import bsky4j.model.bsky.embed.*;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -45,6 +41,11 @@ public class EmbedDeserializer implements JsonDeserializer<EmbedUnion> {
 
             if (type.getAsString().equals(BlueskyTypes.EmbedRecordWithMedia)) {
                 return context.deserialize(obj, new TypeToken<EmbedRecordWithMedia>() {
+                }.getType());
+            }
+
+            if (type.getAsString().equals(BlueskyTypes.EmbedVideo)) {
+                return context.deserialize(obj, new TypeToken<EmbedVideo>() {
                 }.getType());
             }
         }
