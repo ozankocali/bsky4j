@@ -1,10 +1,11 @@
 package bsky4j.api.entity.bsky.feed;
 
 import bsky4j.model.bsky.feed.FeedDefsGeneratorView;
+import bsky4j.model.common.BlueskyObject;
 
 import java.util.List;
 
-public class FeedGetActorFeedsResponse {
+public class FeedGetActorFeedsResponse extends BlueskyObject {
 
     private String cursor;
     private List<FeedDefsGeneratorView> feeds;

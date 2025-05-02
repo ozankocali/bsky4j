@@ -3,8 +3,9 @@ package bsky4j.api.entity.bsky.feed;
 import java.util.List;
 
 import bsky4j.model.bsky.feed.FeedDefsFeedViewPost;
+import bsky4j.model.common.BlueskyObject;
 
-public class FeedGetActorLikesResponse {
+public class FeedGetActorLikesResponse extends BlueskyObject {
 
     private String cursor;
     private List<FeedDefsFeedViewPost> feed;

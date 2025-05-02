@@ -1,10 +1,11 @@
 package bsky4j.api.entity.bsky.feed;
 
 import bsky4j.model.bsky.feed.FeedGetLikesLike;
+import bsky4j.model.common.BlueskyObject;
 
 import java.util.List;
 
-public class FeedGetLikesResponse {
+public class FeedGetLikesResponse extends BlueskyObject {
 
     private String uri;
     private String cid;

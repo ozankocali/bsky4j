@@ -1,11 +1,12 @@
 package bsky4j.api.entity.bsky.feed;
 
 import bsky4j.model.bsky.feed.FeedDefsFeedViewPost;
+import bsky4j.model.common.BlueskyObject;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class FeedGetTimelineResponse {
+public class FeedGetTimelineResponse extends BlueskyObject {
 
     @Nullable
     private String cursor;

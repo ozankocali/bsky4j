@@ -1,10 +1,11 @@
 package bsky4j.api.entity.bsky.actor;
 
 import bsky4j.model.bsky.actor.ActorDefsProfileViewDetailed;
+import bsky4j.model.common.BlueskyObject;
 
 import java.util.List;
 
-public class ActorGetProfilesResponse {
+public class ActorGetProfilesResponse extends BlueskyObject {
 
     private List<ActorDefsProfileViewDetailed> profiles;
 

@@ -1,11 +1,12 @@
 package bsky4j.api.entity.bsky.feed;
 
 import bsky4j.model.bsky.actor.ActorDefsProfileView;
+import bsky4j.model.common.BlueskyObject;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class FeedGetRepostedByResponse {
+public class FeedGetRepostedByResponse extends BlueskyObject {
 
     private String uri;
     @Nullable

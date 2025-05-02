@@ -1,6 +1,8 @@
 package bsky4j.api.entity.atproto.repo;
 
-public class RepoCreateRecordResponse {
+import bsky4j.model.common.BlueskyObject;
+
+public class RepoCreateRecordResponse extends BlueskyObject {
 
     private String uri;
     private String cid;

@@ -1,8 +1,9 @@
 package bsky4j.api.entity.bsky.feed;
 
 import bsky4j.model.bsky.feed.FeedDefsGeneratorView;
+import bsky4j.model.common.BlueskyObject;
 
-public class FeedGetFeedGeneratorResponse {
+public class FeedGetFeedGeneratorResponse extends BlueskyObject {
 
     private FeedDefsGeneratorView view;
     private Boolean isOnline;
