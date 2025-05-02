@@ -1,23 +1,24 @@
 package bsky4j.model.bsky.embed;
 
 import bsky4j.BlueskyTypes;
+import bsky4j.model.share.Blob;
 import com.google.gson.annotations.SerializedName;
 
 public class EmbedVideo implements EmbedUnion {
     @SerializedName("$type")
     private String type;
-    private EmbedVideoVideo video;
+    private Blob video;
 
     public EmbedVideo() {
         this.type = BlueskyTypes.EmbedVideo;
     }
 
 
-    public EmbedVideoVideo getVideo() {
+    public Blob getVideo() {
         return video;
     }
 
-    public void setVideo(EmbedVideoVideo video) {
+    public void setVideo(Blob video) {
         this.video = video;
     }
 
