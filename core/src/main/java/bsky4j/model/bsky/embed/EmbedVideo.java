@@ -8,6 +8,8 @@ public class EmbedVideo implements EmbedUnion {
     @SerializedName("$type")
     private String type;
     private Blob video;
+    private String alt;
+
 
     public EmbedVideo() {
         this.type = BlueskyTypes.EmbedVideo;
@@ -28,5 +30,13 @@ public class EmbedVideo implements EmbedUnion {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getAlt() {
+        return alt;
+    }
+
+    public void setAlt(String alt) {
+        this.alt = alt;
     }
 }
