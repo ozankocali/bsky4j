@@ -1,8 +1,10 @@
 package bsky4j.model.bsky.feed;
 
+import bsky4j.model.common.BlueskyObject;
+
 import javax.annotation.Nullable;
 
-public class FeedDefsFeedViewPost {
+public class FeedDefsFeedViewPost extends BlueskyObject {
 
     private FeedDefsPostView post;
     @Nullable

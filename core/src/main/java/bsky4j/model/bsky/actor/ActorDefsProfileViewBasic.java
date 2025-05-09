@@ -1,6 +1,7 @@
 package bsky4j.model.bsky.actor;
 
 import bsky4j.model.atproto.label.LabelDefsLabel;
+import bsky4j.model.common.BlueskyObject;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 /**
  * A reference to an actor in the network.
  */
-public class ActorDefsProfileViewBasic {
+public class ActorDefsProfileViewBasic extends BlueskyObject {
 
     private String did;
     private String handle;

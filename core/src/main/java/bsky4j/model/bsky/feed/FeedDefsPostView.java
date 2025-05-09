@@ -2,9 +2,10 @@ package bsky4j.model.bsky.feed;
 
 import bsky4j.model.bsky.actor.ActorDefsProfileViewBasic;
 import bsky4j.model.bsky.embed.EmbedViewUnion;
+import bsky4j.model.common.BlueskyObject;
 import bsky4j.model.share.RecordUnion;
 
-public class FeedDefsPostView {
+public class FeedDefsPostView extends BlueskyObject {
 
     private String uri;
     private String cid;

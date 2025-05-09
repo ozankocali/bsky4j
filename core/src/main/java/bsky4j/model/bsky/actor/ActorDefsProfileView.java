@@ -1,11 +1,12 @@
 package bsky4j.model.bsky.actor;
 
 import bsky4j.model.atproto.label.LabelDefsLabel;
+import bsky4j.model.common.BlueskyObject;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ActorDefsProfileView {
+public class ActorDefsProfileView extends BlueskyObject {
 
     private String did;
     private String handle;
