@@ -52,6 +52,7 @@ public class WebSocketClient {
         mThread = new Thread(() -> {
             try {
                 String secret = createSecret();
+                //logger.debug("Secret: " + secret);
 
                 String path = isEmpty(mURI.getPath()) ? "/" : mURI.getPath();
                 if (!isEmpty(mURI.getQuery())) {
@@ -80,10 +81,12 @@ public class WebSocketClient {
 
                 // Read HTTP response status line.
                 String status = readLine(stream);
+                //logger.debug(status);
 
                 // Read HTTP response headers.
                 String line;
                 while (!isEmpty(line = readLine(stream))) {
+                    //logger.debug(line); check if commit built correct
                 }
 
                 mListener.onConnect();
@@ -92,10 +95,12 @@ public class WebSocketClient {
                 mParser.start(stream);
 
             } catch (EOFException ex) {
+                //logger.debug("WebSocket EOF!", ex);
                 mListener.onDisconnect(0, "EOF");
 
             } catch (SSLException ex) {
                 // Connection reset by peer
+                //logger.debug("Websocket SSL error!", ex);
                 mListener.onDisconnect(0, "SSL");
 
             } catch (Exception ex) {
@@ -118,6 +123,7 @@ public class WebSocketClient {
                     mSocket.close();
                     mSocket = null;
                 } catch (IOException ex) {
+                    //logger.debug("Error while disconnecting", ex);
                     mListener.onError(ex);
                 }
             });
@@ -169,6 +175,7 @@ public class WebSocketClient {
     }
 
     private void writeRN(PrintWriter writer, String line) {
+        //logger.debug(line);
         writer.print(line + "\r\n");
     }
 
