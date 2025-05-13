@@ -49,6 +49,7 @@ public class StreamClient implements WebSocketListener {
             this.atproto = atproto;
             this.pool = Executors.newCachedThreadPool();
             this.client = new WebSocketClient(new URI(uri), this);
+            logger.setLogLevel(Logger.LogLevel.ERROR);
 
         } catch (Exception e) {
             throw new ATProtocolException(e);

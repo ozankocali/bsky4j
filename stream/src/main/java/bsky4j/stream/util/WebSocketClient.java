@@ -37,6 +37,7 @@ public class WebSocketClient {
         mListener = listener;
         mParser = new HybiParser(this);
         mService = Executors.newSingleThreadExecutor();
+        logger.setLogLevel(Logger.LogLevel.ERROR);
     }
 
     public WebSocketListener getListener() {
