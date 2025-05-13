@@ -86,7 +86,7 @@ public class WebSocketClient {
                 // Read HTTP response headers.
                 String line;
                 while (!isEmpty(line = readLine(stream))) {
-                    //logger.debug(line); check if commit built correct
+                    //logger.debug(line);
                 }
 
                 mListener.onConnect();
