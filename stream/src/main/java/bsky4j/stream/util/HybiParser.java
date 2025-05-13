@@ -115,7 +115,7 @@ public class HybiParser {
     }
 
     public void start(HappyDataInputStream stream) throws IOException {
-        logger.setLogLevel(Logger.LogLevel.ERROR);
+
         while (stream.available() != -1) {
             switch (mStage) {
                 case 0:
