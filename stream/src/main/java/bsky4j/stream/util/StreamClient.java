@@ -71,7 +71,6 @@ public class StreamClient implements WebSocketListener {
 
     @Override
     public void onConnect() {
-        //logger.debug("[Connection Opened]");
 
         this.isOpen = true;
         if (openedCallback != null) {
@@ -150,7 +149,6 @@ public class StreamClient implements WebSocketListener {
                                 }
 
                             } catch (Exception e) {
-                                //logger.debug("[Record Deleted?]"
                                 //        + " repo: " + repo
                                 //        + " path: " + path);
                             }
@@ -165,7 +163,6 @@ public class StreamClient implements WebSocketListener {
 
     @Override
     public void onDisconnect(int code, String reason) {
-        //logger.debug("[Connection Closed]" +
           //      " code: " + code +
             //    " reason: " + reason);
 
@@ -178,10 +175,7 @@ public class StreamClient implements WebSocketListener {
     @Override
     public void onError(Exception error) {
         if (error != null) {
-            /*logger.debug("[Connection Error]"
-                    + " exception: " + error.getClass().getName()
-                    + " message: " + error.getMessage()
-                    + " trace: ", error);*/
+
         }
         if (errorCallback != null) {
             errorCallback.onError(error);
