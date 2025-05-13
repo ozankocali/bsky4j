@@ -308,7 +308,7 @@ public class HybiParser {
         } else if (opcode == OP_CLOSE) {
             int code = (payload.length >= 2) ? 256 * payload[0] + payload[1] : 0;
             String reason = (payload.length > 2) ? encode(slice(payload, 2)) : null;
-            logger.debug("Got close op! " + code + " " + reason);
+            //logger.debug("Got close op! " + code + " " + reason);
             mClient.getListener().onDisconnect(code, reason);
 
         } else if (opcode == OP_PING) {
